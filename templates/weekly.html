@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{{ template "head" "Weekly Period - Pill Tracker"}}
+
+		<link href="/res/form-validation.css" rel="stylesheet">
+		<style>
+			.bd-placeholder-img {
+				font-size: 1.125rem;
+				text-anchor: middle;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				user-select: none;
+			}
+
+			@media (min-width: 768px) {
+				.bd-placeholder-img-lg {
+					font-size: 3.5rem;
+				}
+			}
+		</style>
+	</head>
+	<body class="bg-light">
+		{{ template "header" "Week Graph" }}
+		<div class="container">
+			<main>
+				<div class="py-5 text-center">
+					<img class="d-block mx-auto mb-4" src="/res/img/undraw_medicine_b1ol.svg" alt="" width="30%" height="auto">
+					<h2>Weekly Medicine Use Table</h2>
+				</div>
+
+				<div class="row g-5">
+					<table class="table table-striped">
+                        <thead>
+							<tr>
+								<th scope="col">#</th>
+								<th scope="col">Medicine no.</th>
+								<th scope="col">Medicine name</th>
+                                <th scope="col">Size</th>
+                                <th scope="col">Count per box</th>
+                                <th scole="col">Hour</th>
+							</tr>
+						</thead>
+                        <thead>
+                            <tr>
+                                <th>Monday</th>
+                            </tr>
+                        </thead>
+						<tbody>
+							{{ range .Mon }}
+							<tr>
+								<th scope="row">{{ .ID }}</th>
+								<td>{{ .MedicineID }}</td>
+								<td>{{ .Name }}</td>
+								<td>{{ .Size }}</td>
+								<td>{{ .Count }}</td>
+                                <td>{{ .Hour }}</td>
+							</tr>
+					    	{{ end }}
+                        </tbody>
+                        <thead>
+                            <tr>
+                                <th>Tuesday</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+							{{ range .Tue }}
+							<tr>
+								<th scope="row">{{ .ID }}</th>
+								<td>{{ .MedicineID }}</td>
+								<td>{{ .Name }}</td>
+								<td>{{ .Size }}</td>
+								<td>{{ .Count }}</td>
+                                <td>{{ .Hour }}</td>
+							</tr>
+						    {{ end }}
+						</tbody>
+                        <thead>
+                            <tr>
+                                <th>Wednesday</th>
+                            </tr>
+                        </thead>
+						<tbody>
+							{{ range .Wed }}
+							<tr>
+								<th scope="row">{{ .ID }}</th>
+								<td>{{ .MedicineID }}</td>
+								<td>{{ .Name }}</td>
+								<td>{{ .Size }}</td>
+								<td>{{ .Count }}</td>
+                                <td>{{ .Hour }}</td>
+							</tr>
+						    {{ end }}
+						</tbody>
+                        <thead>
+                            <tr>
+                                <th>Thursday</th>
+                            </tr>
+                        </thead>
+						<tbody>
+							{{ range .Thu }}
+							<tr>
+								<th scope="row">{{ .ID }}</th>
+								<td>{{ .MedicineID }}</td>
+								<td>{{ .Name }}</td>
+								<td>{{ .Size }}</td>
+								<td>{{ .Count }}</td>
+                                <td>{{ .Hour }}</td>
+							</tr>
+						    {{ end }}
+						</tbody>
+                        <thead>
+                            <tr>
+                                <th>Friday</th>
+                            </tr>
+                        </thead>
+						<tbody>
+							{{ range .Fri }}
+							<tr>
+								<th scope="row">{{ .ID }}</th>
+								<td>{{ .MedicineID }}</td>
+								<td>{{ .Name }}</td>
+								<td>{{ .Size }}</td>
+								<td>{{ .Count }}</td>
+                                <td>{{ .Hour }}</td>
+							</tr>
+						    {{ end }}
+						</tbody>
+                        <thead>
+                            <tr>
+                                <th>Saturday</th>
+                            </tr>
+                        </thead>
+						<tbody>
+							{{ range .Sat }}
+							<tr>
+								<th scope="row">{{ .ID }}</th>
+								<td>{{ .MedicineID }}</td>
+								<td>{{ .Name }}</td>
+								<td>{{ .Size }}</td>
+								<td>{{ .Count }}</td>
+                                <td>{{ .Hour }}</td>
+							</tr>
+						    {{ end }}
+						</tbody>
+                        <thead>
+                            <tr>
+                                <th>Sunday</th>
+                            </tr>
+                        </thead>
+						<tbody>
+							{{ range .Sun }}
+							<tr>
+								<th scope="row">{{ .ID }}</th>
+								<td>{{ .MedicineID }}</td>
+								<td>{{ .Name }}</td>
+								<td>{{ .Size }}</td>
+								<td>{{ .Count }}</td>
+                                <td>{{ .Hour }}</td>
+							</tr>
+						    {{ end }}
+						</tbody>
+					</table>
+				</div>
+			</main>
+
+		</div>
+		<script src="/res/form-validation.js"></script>
+		{{ template "footer" }}
+	</body>
+</html>

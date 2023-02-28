@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+	<head>
+		{{ template "head" "Pill Tracker" }}
+		<link href="/res/features.css" rel="stylesheet">
+
+		<style>
+		  .bd-placeholder-img {
+			font-size: 1.125rem;
+			text-anchor: middle;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			user-select: none;
+		  }
+
+		  @media (min-width: 768px) {
+			.bd-placeholder-img-lg {
+			  font-size: 3.5rem;
+			}
+		  }
+
+		  #intro {
+				background-image: url("/res/img/laurynas-mereckas-1TL8AoEDj_c-unsplash.jpg");
+				background-size: cover;
+				background-repeat: no-repeat;
+				height: 100vh;
+		  }
+		</style>
+	</head>
+  <body>
+	  <div id="intro" class="bg-image">
+		  <div class="mask shadow h-100" style="background-color: rgba(98, 89, 255, 0.5);">
+			  <div class="d-flex justify-content-center align-items-center h-100">
+			  <div class="text-black text-center">
+				  <h1 class="mb-3">Get Your Medicine Under Control</h1>
+				  <h5 class="mb-4">Track your medicine use and best before dates easily!</h5>
+				  <a class="btn btn-dark btn-lg m-2" href="/signup" role="button">Register now!</a>
+				  <a class="btn btn-dark btn-lg m-2" href="/login" role="button">Login</a>
+				  <br>
+				  <div style="padding-top: 5vw;">
+					<a class="btn btn-outline-dark" href="#intro" style="filter: sepia(50%); width: 40px; height: 40px; padding: 0; line-height: 40px; border-radius: 50%;"><i data-feather="chevrons-down" aria-hidden="true"></i></a>
+				  </div>
+			  </div>
+			  </div>
+		  </div>
+	  </div>
+
+	  <div class="b-example-divider"></div>
+
+	  <div class="container py-5" id="intro">
+		  <img class="mx-auto d-block" src="/res/img/undraw_medical_care_movn.svg" width="30%" height="auto">
+		  <h2 class="pb-2 border-bottom">Kolayca Düzenleyin</h2>
+		  <div class="row g-5 py-5">
+			<div class="feature col-md-4">
+			  <div class="feature-icon bg-primary bg-gradient">
+				  <i style="width: 32px; height: 32px;" data-feather="clock"></i>
+			  </div>
+			  <h2>Zamanlayıcı</h2>
+			  <p>Düzenli kullanmanız gereken ilaçları kolayca ekleyin, kolayca takip edin.</p>
+			</div>
+			<div class="feature col-md-4">
+			  <div class="feature-icon bg-primary bg-gradient">
+				  <i style="width: 32px; height: 32px;" data-feather="list"></i>
+			  </div>
+			  <h2>Hepsi tek yerde</h2>
+			  <p>Tüm ilaçları tek yere kaydedin, tek yerden kontrol edin.</p>
+			</div>
+			<div class="feature col-md-4">
+			  <div class="feature-icon bg-primary bg-gradient">
+				  <i style="width: 32px; height: 32px;" data-feather="alert-circle"></i>
+			  </div>
+			  <h2>Kontrol altında</h2>
+			  <p>Son kullanma tarihi yaklaşan ilaçları geç kalmadan öğrenin.</p>
+			</div>
+		  </div>
+		</div>
+
+		<div class="b-example-divider"></div>
+
+		<div class="container py-5" id="hanging-icons">
+		  <img class="mx-auto d-block" src="/res/img/undraw_schedule_pnbk.svg" width="30%" height="auto">
+		  <h2 class="pb-2 border-bottom">Kontrol Sizde</h2>
+		  <div class="row g-5 py-5">
+			<div class="col-md-4 d-flex align-items-start">
+			  <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+				  <i style="width: 32px; height: 32px;" data-feather="bell"></i>
+			  </div>
+			  <div>
+				<h2>Özelleştirilebilir alarmlar</h2>
+				<p>Her ilaç için ihtiyacınıza uygun alarm kurun. İster 5 gün önce, ister 2 ay önce haberdar olun</p>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex align-items-start">
+			  <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+				  <i style="width: 32px; height: 32px;" data-feather="fast-forward"></i>
+			  </div>
+			  <div>
+				<h2>Otomatik tamamlama</h2>
+				<p>Daha önce eklediğiniz ilacı tekrar tekrar girmeyin. Sadece ismini yazdığınızda diğer kısımlar otomatik dolar</p>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex align-items-start">
+			  <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+				  <i style="width: 32px; height: 32px;" data-feather="wifi"></i>
+			  </div>
+			  <div>
+				<h2>Her yerden erişim</h2>
+				<p>İnternetin olduğu her yerden, ister telefondan ister bilgisayardan ilaçlarınıza erişin</p>
+			  </div>
+			</div>
+		  </div>
+
+		  <div class="d-flex justify-content-center">
+			  <a href="/kayit" class="btn btn-primary">
+				  Hemen Başlayın!
+			  </a>
+		  </div>
+		</div>
+
+		<div class="b-example-divider"></div>
+
+		{{ template "footer" }}
+  </body>
+</html>

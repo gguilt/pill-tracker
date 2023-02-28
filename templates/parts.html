@@ -1,0 +1,47 @@
+{{define "head"}}
+    <title>{{ . }}</title>
+    <meta charset="utf-8">
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <meta http-equiv=x-ua-compatible content="ie=edge">
+
+    <link rel="stylesheet" href="/res/bootstrap.min.css" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6">
+	<link rel="stylesheet" href="/res/headers.css">
+{{end}}
+
+{{ define "header" }}
+<div class="container">
+  <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+    <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+		Pill Tracker
+    </a>
+
+    <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+      <li><a href="/" class="nav-link px-2 link-dark">Medicine List</a></li>
+      <li><a href="/week" class="nav-link px-2 link-dark">Weekly Usage</a></li>
+      <li><a href="/add" class="nav-link px-2 link-dark">Add Medicine</a></li>
+    </ul>
+
+    <div class="col-md-3 text-end">
+      <a href="/logout" class="btn btn-outline-primary me-2" role="button">Logout</a>
+    </div>
+  </header>
+</div>
+{{end}}
+
+{{define "footer"}}
+	<footer class="my-5 pt-5 text-muted text-center text-small">
+		<p class="mb-1">All rights reserved. &copy; 2021. Pill Tracker.</p>
+		<ul class="list-inline">
+			<li class="list-inline-item"><a href="/privacy">Privacy</a></li>
+			<li class="list-inline-item"><a href="/terms">Terms</a></li>
+			<li class="list-inline-item"><a href="/support">Support</a></li>
+		</ul>
+	</footer>
+
+    <script src="/res/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"></script>
+
+	<script src="/res/feather.min.js"></script>
+	<script>
+		feather.replace();
+	</script>
+{{end}}

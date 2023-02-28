@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{{ template "head" "Add Medicine - Pill Tracker"}}
+
+		<link href="/res/form-validation.css" rel="stylesheet">
+		<style>
+			.bd-placeholder-img {
+				font-size: 1.125rem;
+				text-anchor: middle;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				user-select: none;
+			}
+
+			@media (min-width: 768px) {
+				.bd-placeholder-img-lg {
+					font-size: 3.5rem;
+				}
+			}
+		</style>
+	</head>
+	<body class="bg-light">
+		{{ template "header" "Add Medicine" }}
+		<div class="container">
+			<main>
+				<div class="py-5 text-center">
+					<img class="d-block mx-auto mb-4" src="/res/img/undraw_medical_research_qg4d.svg" alt="" width="30%" height="auto">
+					<h2>Medicine Form</h2>
+					<p class="lead">You can use this form to add new medicine.</p>
+				</div>
+
+				<div class="row g-5">
+					<form class="needs-validation" action="/post/add" method="POST" novalidate>
+						<hr class="my-4">
+						<h4 class="mb-3">Medicine information</h4>
+						<div class="row g-3">
+							<div class="col-sm-6">
+								<label for="medicineName" class="form-label">Name</label>
+								<input type="text" class="form-control" id="medicineName" name="medicineName" placeholder="" value="" required>
+								<div class="invalid-feedback">
+									Entry is invalid.
+								</div>
+							</div>
+
+							<div class="col-sm-6">
+								<label for="medicineFirm" class="form-label">Producer</label>
+								<input type="text" class="form-control" id="medicineFirm" name="medicineFirm" placeholder="" value="" required>
+								<div class="invalid-feedback">
+									Entry is invalid.
+								</div>
+							</div>
+
+							<div class="col-sm-12">
+								<label for="medicineExpDate" class="form-label">Best before</label>
+								<input type="text" class="form-control" id="medicineExpDate" name="medicineExpDate" placeholder="31/12/2025 15:04" value="" required>
+								<div class="invalid-feedback">
+									Entry is invalid.
+								</div>
+							</div>
+
+							<div class="col-sm-12">
+								<label for="entryCount" class="form-label">Entry count</label>
+								<input type="text" class="form-control" id="entryCount" name="entryCount" placeholder="" value="" required>
+								<small class="text-muted">How many to add?</small>
+								<div class="invalid-feedback">
+									Entry is invalid.
+								</div>
+							</div>
+
+							<div class="col-12">
+								<label for="medicineDescription" class="form-label">Description <span class="text-muted">(optional)</span></label>
+								<input type="text" class="form-control" id="medicineDescription" name="medicineDescription" placeholder="">
+							</div>
+
+							<div class="col-md-6">
+								<label for="medicineSizePerBox" class="form-label">Size per box</label>
+								<input type="text" class="form-control" id="medicineSizePerBox" name="medicineSizePerBox" placeholder="" required>
+								<div class="invalid-feedback">
+									Entry is invalid.
+								</div>
+							</div>
+
+							<div class="col-md-6">
+								<label for="medicineSizeType" class="form-label">Size type</label>
+								<select class="form-select" id="medicineSizeType" name="medicineSizeType" required>
+									<option>mg (Milligram)</option>
+									<option>ml (Milliliter)</option>
+								</select>
+								<div class="invalid-feedback">
+									Entry is invalid.
+								</div>
+							</div>
+
+							<div class="col-md-6">
+								<label for="medicineCountPerBox" class="form-label">Count per box</label>
+								<input type="text" class="form-control" id="medicineCountPerBox" name="medicineCountPerBox" placeholder="" required>
+								<div class="invalid-feedback">
+									Entry is invalid.
+								</div>
+							</div>
+
+							<div class="col-md-6">
+								<label for="medicineType" class="form-label">Medicine type</label>
+								<select class="form-select" id="medicineType" name="medicineType" required>
+									<option>Tablet</option>
+									<option>Syrup</option>
+									<option>Spray</option>
+									<option>Capsule</option>
+								</select>
+								<div class="invalid-feedback">
+									Entry is invalid.
+								</div>
+							</div>
+						</div>
+
+						<hr class="my-4">
+						<h4 class="mb-3">Best before alarm</h4>
+
+						<div class="row gy-3">
+							<div class="col-md-12">
+								<label for="expireAlarmName" class="form-label">Alarm İsmi</label>
+								<input type="text" class="form-control" id="expireAlarmName" name="expireAlarmName" placeholder="" required>
+								<div class="invalid-feedback">
+									Entry is invalid.
+								</div>
+							</div>
+
+							<div class="col-md-4">
+								<label for="expireAlarmTime" class="form-label">Süre</label>
+								<input type="text" class="form-control" id="expireAlarmTime" name="expireAlarmTime" placeholder="" required>
+								<div class="invalid-feedback">
+									Entry is invalid.
+								</div>
+							</div>
+
+							<div class="col-md-4">
+								<label for="expireAlarmTimeType" class="form-label">Süre türü</label>
+								<select class="form-select" id="expireAlarmTimeType" name="expireAlarmTimeType" required>
+									<option>Day</option>
+									<option>Week</option>
+									<option>Month</option>
+									<option>Year</option>
+								</select>
+								<div class="invalid-feedback">
+									Entry is invalid.
+								</div>
+							</div>
+
+							<div class="col-md-4">
+								<label for="expireAlarmBeforeAfter" class="form-label">Before/After</label>
+								<select class="form-select" id="expireAlarmBeforeAfter" name="expireAlarmBeforeAfter" required>
+									<option>Before</option>
+									<option>After</option>
+								</select>
+								<div class="invalid-feedback">
+									Entry is invalid.
+								</div>
+							</div>
+
+							<div class="col-md-12">
+								<label for="expireAlarmAction" class="form-label">Action</label>
+								<select class="form-select" id="expireAlarmAction" name="expireAlarmAction" required>
+									<option>Alarm</option>
+									<option>Auto-delete</option>
+								</select>
+								<div class="invalid-feedback">
+									Entry is invalid.
+								</div>
+							</div>
+						</div>
+
+						<hr class="my-4">
+						<h4 class="mb-3">Usage alarm</h4>
+
+						<div class="form-check">
+							<input type="checkbox" class="form-check-input" id="useAlarmMonday" name="useAlarmMonday" checked>
+							<label class="form-check-label" for="useAlarmMonday">Monday</label>
+						</div>
+
+						<div class="form-check">
+							<input type="checkbox" class="form-check-input" id="useAlarmTuesday" name="useAlarmTuesday" checked>
+							<label class="form-check-label" for="useAlarmTuesday">Tuesday</label>
+						</div>
+
+						<div class="form-check">
+							<input type="checkbox" class="form-check-input" id="useAlarmWednesday" name="useAlarmWednesday" checked>
+							<label class="form-check-label" for="useAlarmWednesday">Wednesday</label>
+						</div>
+
+						<div class="form-check">
+							<input type="checkbox" class="form-check-input" id="useAlarmThursday" name="useAlarmThursday" checked>
+							<label class="form-check-label" for="useAlarmThursday">Thursday</label>
+						</div>
+
+						<div class="form-check">
+							<input type="checkbox" class="form-check-input" id="useAlarmFriday" name="useAlarmFriday" checked>
+							<label class="form-check-label" for="useAlarmFriday">Friday</label>
+						</div>
+
+						<div class="form-check">
+							<input type="checkbox" class="form-check-input" id="useAlarmSaturday" name="useAlarmSaturday" checked>
+							<label class="form-check-label" for="useAlarmSaturday">Saturday</label>
+						</div>
+
+						<div class="form-check">
+							<input type="checkbox" class="form-check-input" id="useAlarmSunday" name="useAlarmSunday" checked>
+							<label class="form-check-label" for="useAlarmSunday">Sunday</label>
+						</div>
+
+						<div class="row gy-3">
+							<div class="col-md-12">
+								<label for="useAlarmTime" class="form-label">Hour</label>
+								<input type="text" class="form-control" id="useAlarmTime" name="useAlarmTime" placeholder="15:04" required>
+								<div class="invalid-feedback">
+									Entry is invalid.
+								</div>
+							</div>
+						</div>
+
+						<hr class="my-4">
+						<button class="w-100 btn btn-primary btn-lg" type="submit">Submit</button>
+
+					</form>
+				</div>
+		</div>
+			</main>
+
+			</div>
+			<script src="/res/form-validation.js"></script>
+			{{ template "footer" }}
+	</body>
+</html>
